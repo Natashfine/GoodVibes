@@ -1,0 +1,46 @@
+{
+ "albums":[
+   {
+   "name":"B'Day",
+   "artist":"Beyonce",
+   "year":"2006",
+   "cover_photo":"https://mp3teca.com/-/2014/11/Beyonce.jpg",
+   "songs":[
+     {"name":"Deja-vu", "length":"4:00"},
+     {"name":"Get me bodied", "length":"3:35"},
+     {"name":"Suga mama", "length":"3:26"},
+     {"name":"Upgrade you", "length":"4:33"}]
+   },
+   {
+   "name":"AM",
+   "artist":"Arctic Monkeys",
+   "year":"2014",
+   "cover_photo":"https://www.twmp.com.mx/wp-content/uploads/2015/05/Screen-Shot-2015-05-14-at-1.20.49-AM.png?w=640",
+   "songs":[
+     {"name":"Do I wanna know?", "length":"4:32"},
+     {"name":"R U Mine?", "length":"3:20"},
+     {"name":"One for the road", "length":"3:26"},
+     {"name":"Arabella", "length":"3:27"},
+     {"name":"I want it all", "length":"3:04"}]
+   },
+   {
+     "name":"Built on Glass",
+   "artist":"Chet Faker",
+   "year":"2014",
+   "cover_photo":"https://cdn2.thelineofbestfit.com/images/remote/https_cdn2.thelineofbestfit.com/media/2014/Chet_Faker.png",
+   "songs":[
+     {"name":"Release your problems", "length":"3:12"},
+     {"name":"Talk is cheap", "length":"3:38"}
+   ]},
+   {
+   "name":"Wish You Were Here",
+   "artist":"Pink Floyd",
+   "year":"1975",
+   "cover_photo":"https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+   "songs":[
+     {"name":"Shine on you crazy diamond", "length":"13:32"},
+     {"name":"Welcome to the machine", "length":"7:32"},
+     {"name":"Have a Cigar", "length":"5:24"}]
+   }
+   ]
+}

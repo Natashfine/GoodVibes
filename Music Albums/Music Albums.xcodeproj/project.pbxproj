@@ -17,6 +17,9 @@
 		E22A9E531E47780700579DDC /* Music_AlbumsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E22A9E521E47780700579DDC /* Music_AlbumsUITests.m */; };
 		E22A9E631E477AF300579DDC /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E22A9E611E477AF300579DDC /* icon@2x.png */; };
 		E22A9E641E477AF300579DDC /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E22A9E621E477AF300579DDC /* icon@3x.png */; };
+		E2C9330E1E59E7BA0027AA80 /* AlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9330C1E59E7BA0027AA80 /* AlbumTableViewCell.m */; };
+		E2C9330F1E59E7BA0027AA80 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9330D1E59E7BA0027AA80 /* AlbumTableViewCell.xib */; };
+		E2C933111E59ECDF0027AA80 /* document.json in Resources */ = {isa = PBXBuildFile; fileRef = E2C933101E59ECDF0027AA80 /* document.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,10 @@
 		E22A9E541E47780700579DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22A9E611E477AF300579DDC /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E22A9E621E477AF300579DDC /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		E2C9330B1E59E7BA0027AA80 /* AlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewCell.h; sourceTree = "<group>"; };
+		E2C9330C1E59E7BA0027AA80 /* AlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewCell.m; sourceTree = "<group>"; };
+		E2C9330D1E59E7BA0027AA80 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		E2C933101E59ECDF0027AA80 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = document.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +116,9 @@
 				E22A9E311E47780700579DDC /* AppDelegate.m */,
 				E22A9E331E47780700579DDC /* ViewController.h */,
 				E22A9E341E47780700579DDC /* ViewController.m */,
+				E2C9330B1E59E7BA0027AA80 /* AlbumTableViewCell.h */,
+				E2C9330C1E59E7BA0027AA80 /* AlbumTableViewCell.m */,
+				E2C9330D1E59E7BA0027AA80 /* AlbumTableViewCell.xib */,
 				E22A9E361E47780700579DDC /* Main.storyboard */,
 				E22A9E391E47780700579DDC /* Assets.xcassets */,
 				E22A9E3B1E47780700579DDC /* LaunchScreen.storyboard */,
@@ -148,6 +158,7 @@
 		E22A9E601E477ADF00579DDC /* Resoueces */ = {
 			isa = PBXGroup;
 			children = (
+				E2C933101E59ECDF0027AA80 /* document.json */,
 				E22A9E611E477AF300579DDC /* icon@2x.png */,
 				E22A9E621E477AF300579DDC /* icon@3x.png */,
 			);
@@ -260,11 +271,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C933111E59ECDF0027AA80 /* document.json in Resources */,
 				E22A9E3D1E47780700579DDC /* LaunchScreen.storyboard in Resources */,
 				E22A9E631E477AF300579DDC /* icon@2x.png in Resources */,
 				E22A9E641E477AF300579DDC /* icon@3x.png in Resources */,
 				E22A9E3A1E47780700579DDC /* Assets.xcassets in Resources */,
 				E22A9E381E47780700579DDC /* Main.storyboard in Resources */,
+				E2C9330F1E59E7BA0027AA80 /* AlbumTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +305,7 @@
 				E22A9E351E47780700579DDC /* ViewController.m in Sources */,
 				E22A9E321E47780700579DDC /* AppDelegate.m in Sources */,
 				E22A9E2F1E47780700579DDC /* main.m in Sources */,
+				E2C9330E1E59E7BA0027AA80 /* AlbumTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +537,7 @@
 				E22A9E591E47780700579DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E22A9E5A1E47780700579DDC /* Build configuration list for PBXNativeTarget "Music AlbumsTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +546,7 @@
 				E22A9E5C1E47780700579DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E22A9E5D1E47780700579DDC /* Build configuration list for PBXNativeTarget "Music AlbumsUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +555,7 @@
 				E22A9E5F1E47780700579DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
