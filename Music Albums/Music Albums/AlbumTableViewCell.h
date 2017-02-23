@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearLbl;
 @property (weak, nonatomic) IBOutlet UILabel *timeLbl;
 
+@property (nonatomic, assign) int numOfSong;
+@property (nonatomic, assign) int totalNumOfSongs;
+@property (retain, nonatomic) NSArray *songsArray;
+
 - (void) setAlbumData:(NSDictionary*)dict;
+
 
 @end
