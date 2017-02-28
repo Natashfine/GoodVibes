@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AlbumCellDelegate <NSObject>
+
+-(void) setcurrentIndex:(int)songIndex toAlbum:(NSString*)albumName;
+
+@end
+
 @interface AlbumTableViewCell : UITableViewCell
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageAlbum;
 @property (weak, nonatomic) IBOutlet UILabel *artistLbl;
@@ -19,8 +26,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLbl;
 
 @property (nonatomic, assign) int numOfSong;
+@property (nonatomic, retain) NSString* albumName;
 @property (nonatomic, assign) int totalNumOfSongs;
 @property (retain, nonatomic) NSArray *songsArray;
+@property (nonatomic, weak)id <AlbumCellDelegate> delegate;
 
 - (void) setAlbumData:(NSDictionary*)dict;
 

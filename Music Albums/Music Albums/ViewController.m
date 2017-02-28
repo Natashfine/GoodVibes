@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "AlbumTableViewCell.h"
 
-@interface ViewController () {
+@interface ViewController ()<AlbumCellDelegate>
+ {
     
     NSArray* _albumsArray;
     NSArray* _displayArray;
+    NSMutableDictionary* _indexDict;
     int clicks;
 }
 
@@ -46,6 +48,10 @@
     
     
     _albumsArray = [[NSArray alloc] initWithArray:[allKeys objectForKey:@"albums"]];
+    _indexDict = [[NSMutableDictionary alloc] init];
+    for ( int i =0; i<[_albumsArray count]; i++ ) {
+        [_indexDict setObject:[NSNumber numberWithInt:0] forKey:[_albumsArray[i] objectForKey:@"name"]];
+    }
         NSLog(@"%@",_albumsArray);
         
     
@@ -73,8 +79,16 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AlbumTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    int row = (int)indexPath.row;
+    NSDictionary* albumDict = _displayArray[row];
+    NSNumber* numOfSong = [_indexDict objectForKey:[albumDict objectForKey:@"name"]];
     
-    [cell setAlbumData:_displayArray[indexPath.row]];
+    [cell setNumOfSong:[numOfSong integerValue]];
+
+    
+    cell.delegate = self;
+    [cell setAlbumName:[albumDict objectForKey:@"name"]];
+    [cell setAlbumData:albumDict];
     
     return cell;
 }
@@ -105,6 +119,13 @@
     
     
     [self.albumsTable reloadData];
+}
+
+-(void) setcurrentIndex:(int)songIndex toAlbum:(NSString*)albumName {
+
+    [_indexDict setObject: [NSNumber numberWithInteger: songIndex] forKey:albumName];
+
+    
 }
 
 

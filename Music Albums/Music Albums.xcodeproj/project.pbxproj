@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ABF291DE42D09C23A12FB84 /* libPods-Music Albums.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B26F6B0B8F062D7EF4A1F032 /* libPods-Music Albums.a */; };
 		E22A9E2F1E47780700579DDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E22A9E2E1E47780700579DDC /* main.m */; };
 		E22A9E321E47780700579DDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E22A9E311E47780700579DDC /* AppDelegate.m */; };
 		E22A9E351E47780700579DDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22A9E341E47780700579DDC /* ViewController.m */; };
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290B9205541F641D4A05479E /* Pods-Music Albums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Albums.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Albums/Pods-Music Albums.debug.xcconfig"; sourceTree = "<group>"; };
+		B26F6B0B8F062D7EF4A1F032 /* libPods-Music Albums.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Music Albums.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C090EF61B54BA634D9C9D1D9 /* Pods-Music Albums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Albums.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Albums/Pods-Music Albums.release.xcconfig"; sourceTree = "<group>"; };
 		E22A9E2A1E47780700579DDC /* Music Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22A9E2E1E47780700579DDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E22A9E301E47780700579DDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABF291DE42D09C23A12FB84 /* libPods-Music Albums.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18E6504C3C6CC63DBEBCA876 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				290B9205541F641D4A05479E /* Pods-Music Albums.debug.xcconfig */,
+				C090EF61B54BA634D9C9D1D9 /* Pods-Music Albums.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E22A9E211E47780600579DDC = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +110,8 @@
 				E22A9E461E47780700579DDC /* Music AlbumsTests */,
 				E22A9E511E47780700579DDC /* Music AlbumsUITests */,
 				E22A9E2B1E47780700579DDC /* Products */,
+				18E6504C3C6CC63DBEBCA876 /* Pods */,
+				ED29FF47433DFF1D75FAF01E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +181,14 @@
 			name = Resoueces;
 			sourceTree = "<group>";
 		};
+		ED29FF47433DFF1D75FAF01E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B26F6B0B8F062D7EF4A1F032 /* libPods-Music Albums.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E22A9E571E47780700579DDC /* Build configuration list for PBXNativeTarget "Music Albums" */;
 			buildPhases = (
+				4A9D6A296FE43108854B5324 /* [CP] Check Pods Manifest.lock */,
 				E22A9E261E47780600579DDC /* Sources */,
 				E22A9E271E47780600579DDC /* Frameworks */,
 				E22A9E281E47780600579DDC /* Resources */,
+				55D979EA7C2328E6281EA73B /* [CP] Embed Pods Frameworks */,
+				C0831739241A2813C60DC557 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +323,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A9D6A296FE43108854B5324 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55D979EA7C2328E6281EA73B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Albums/Pods-Music Albums-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0831739241A2813C60DC557 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Albums/Pods-Music Albums-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E22A9E261E47780600579DDC /* Sources */ = {
@@ -452,6 +527,7 @@
 		};
 		E22A9E581E47780700579DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 290B9205541F641D4A05479E /* Pods-Music Albums.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Music Albums/Info.plist";
@@ -463,6 +539,7 @@
 		};
 		E22A9E591E47780700579DDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C090EF61B54BA634D9C9D1D9 /* Pods-Music Albums.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Music Albums/Info.plist";

@@ -7,6 +7,7 @@
 //
 
 #import "AlbumTableViewCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation AlbumTableViewCell 
 
@@ -23,21 +24,24 @@
 
 - (void) setAlbumData:(NSDictionary*)dict {
     
-    self.numOfSong = 0;
+    
     self.songsArray = [[NSArray alloc] initWithArray:[dict objectForKey:@"songs"]];
     self.totalNumOfSongs = (int)[self.songsArray count];
     
     [self.artistLbl setText:[dict objectForKey:@"artist"]];
     [self.yearLbl setText:[dict objectForKey:@"year"]];
     [self.albumLbl setText:[dict objectForKey:@"name"]];
+    [self loadImageWithString:[dict objectForKey:@"cover_photo"]];
+    [self setSongByIndex];
+    
+}
+
+-(void) setSongByIndex {
+    
     [self.countLbl setText:[NSString stringWithFormat:@"%d out of %d", self.numOfSong+1 , self.totalNumOfSongs]];
     [self.timeLbl setText:[self.songsArray[self.numOfSong] objectForKey:@"length"]];
     [self.songLbl setText:[self.songsArray[self.numOfSong] objectForKey:@"name"]];
-    
-    
-   // [self loadImageWithString:[dict objectForKey:@"cover_photo"]];
- 
-    
+    [self.delegate setcurrentIndex:self.numOfSong toAlbum:self.albumName];
 }
 
 - (IBAction)swipeRight:(id)sender {
@@ -45,9 +49,7 @@
     if (self.numOfSong > 0){
         
         self.numOfSong--;
-        [self.timeLbl setText:[self.songsArray[self.numOfSong] objectForKey:@"length"]];
-        [self.songLbl setText:[self.songsArray[self.numOfSong] objectForKey:@"name"]];
-        [self.countLbl setText:[NSString stringWithFormat:@"%d out of %d", self.numOfSong+1 , self.totalNumOfSongs]];
+       [self setSongByIndex];
     }
 
 }
@@ -56,9 +58,7 @@
     if (self.numOfSong < self.totalNumOfSongs-1){
         
         self.numOfSong++;
-        [self.timeLbl setText:[self.songsArray[self.numOfSong] objectForKey:@"length"]];
-        [self.songLbl setText:[self.songsArray[self.numOfSong] objectForKey:@"name"]];
-        [self.countLbl setText:[NSString stringWithFormat:@"%d out of %d", self.numOfSong+1 , self.totalNumOfSongs]];
+       [self setSongByIndex];
     }
 }
 
@@ -66,10 +66,10 @@
     
     NSURL *url = [NSURL URLWithString:urlStr];
     
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *image = [UIImage imageWithData:data];
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+//    UIImage *image = [UIImage imageWithData:data];
     
-    [self.imageAlbum setImage:image];
+    [self.imageAlbum setImageWithURL:url];
 }
 
 
